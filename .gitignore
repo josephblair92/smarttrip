@@ -1,0 +1,6 @@
+.DS_Store
+data/*
+data.json
+trips.json
+node_modules
+package-lock.json

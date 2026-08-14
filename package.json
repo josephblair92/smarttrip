@@ -1,0 +1,17 @@
+{
+  "name": "smartrip-data-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "parser.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joseph Blair",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.4.0",
+    "moment-timezone": "^0.5.43",
+    "prettier": "^3.9.6"
+  }
+}
