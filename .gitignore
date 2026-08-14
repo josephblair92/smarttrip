@@ -4,3 +4,4 @@ data.json
 trips.json
 node_modules
 package-lock.json
+script/download.js
