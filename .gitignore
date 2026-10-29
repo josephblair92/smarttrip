@@ -6,3 +6,4 @@ node_modules
 package-lock.json
 script/download.js
 chart.png
+visitsPerStop.json

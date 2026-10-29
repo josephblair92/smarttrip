@@ -154,6 +154,7 @@ const main = async () => {
       }
       stopCountOverTime[stop.name].push(stop.timestamp);
     }
+    fs.promises.writeFile("visitsPerStop.json", JSON.stringify(stopCountOverTime, null, 2));
   }
 
   const printCountRanking = (countObj, title) => {
