@@ -1,6 +1,7 @@
 import fs from "fs";
 import { parse } from "csv-parse";
 import moment from "moment-timezone";
+import { generateChart } from "./chart.js";
 
 const dataDir = "data";
 const ignoreTypes = [
@@ -143,7 +144,7 @@ const main = async () => {
       }
       stopsToAdd.push({
         name: stopName,
-        timestamp: stop.timestamp
+        timestamp: stop.timestamp * 1000
       });
     });
     for (const stop of stopsToAdd) {
@@ -171,6 +172,7 @@ const main = async () => {
 
   printCountRanking(railStopCount, "Rail Stops");
   printCountRanking(busRouteCount, "Bus Routes");
+  await generateChart(stopCountOverTime);
 };
 
 main();
