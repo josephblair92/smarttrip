@@ -111,6 +111,7 @@ const main = async () => {
 
   const busRouteCount = {};
   const railStopCount = {};
+  const stopCountOverTime = {};
   for (const trip of trips) {
     const railStops = [];
     for (const stop of trip.stops) {
@@ -122,28 +123,36 @@ const main = async () => {
     }
     const stopsToAdd = [];
     railStops.forEach((stop, index) => {
+      let stopName
       if (stop.entry.length && !stop.exit.length) {
-        stopsToAdd.push(stop.entry);
+        stopName = stop.entry;
       } else if (stop.exit.length && !stop.entry.length) {
-        stopsToAdd.push(stop.exit);
+        stopName = stop.exit;
       } else if (
         stop.entry.length &&
         stop.exit.length &&
         stop.description === "Exit"
       ) {
-        stopsToAdd.push(stop.exit);
+        stopName = stop.exit;
       } else {
         console.log(stop);
       }
+      if (!stopName) return;
+      if (stationNameOverrides[stopName]) {
+        stopName = stationNameOverrides[stopName]
+      }
+      stopsToAdd.push({
+        name: stopName,
+        timestamp: stop.timestamp
+      });
     });
     for (const stop of stopsToAdd) {
-      railStopCount[stop] = (railStopCount[stop] || 0) + 1;
+      railStopCount[stop.name] = (railStopCount[stop.name] || 0) + 1;
+      if (!stopCountOverTime[stop.name]) {
+        stopCountOverTime[stop.name] = [];
+      }
+      stopCountOverTime[stop.name].push([stop.timestamp, railStopCount[stop.name]]);
     }
-  }
-  for (const [original, override] of Object.entries(stationNameOverrides)) {
-    railStopCount[override] =
-      (railStopCount[override] || 0) + railStopCount[original];
-    delete railStopCount[original];
   }
 
   const printCountRanking = (countObj, title) => {
