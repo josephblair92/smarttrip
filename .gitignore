@@ -1,9 +1,9 @@
 .DS_Store
-data/*
-data.json
-trips.json
-node_modules
-package-lock.json
-script/download.js
-chart.png
-visitsPerStop.json
+cli/data/*
+cli/data.json
+cli/trips.json
+cli/node_modules
+cli/package-lock.json
+cli/script/download.js
+cli/chart.png
+cli/visitsPerStop.json
