@@ -152,7 +152,7 @@ const main = async () => {
       if (!stopCountOverTime[stop.name]) {
         stopCountOverTime[stop.name] = [];
       }
-      stopCountOverTime[stop.name].push([stop.timestamp, railStopCount[stop.name]]);
+      stopCountOverTime[stop.name].push(stop.timestamp);
     }
   }
 

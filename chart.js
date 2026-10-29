@@ -22,8 +22,8 @@ export const generateChart = async (stopCountOverTime) => {
         type: 'line',
         data: {
             datasets: Object.entries(stopCountOverTime).map(([stopName, stopData]) => ({
-                label: `${stopName} (${stopData.at(-1)[1]})`,
-                data: stopData.map(([x, y]) => ({ x, y })),
+                label: `${stopName} (${stopData.length})`,
+                data: stopData.map((timestamp, index) => ({ x: timestamp, y: index })),
                 spanGaps: true
             }))
         },
@@ -49,13 +49,13 @@ export const generateChart = async (stopCountOverTime) => {
                             day: 'MMM dd yyyy'
                         }
                     },
-                    min: Math.min(...Object.values(stopCountOverTime).map(stopData => stopData[0][0])),
-                    max: Math.max(...Object.values(stopCountOverTime).map(stopData => stopData[stopData.length - 1][0]))
+                    min: Math.min(...Object.values(stopCountOverTime).map(stopData => stopData[0])),
+                    max: Math.max(...Object.values(stopCountOverTime).map(stopData => stopData.at(-1)))
                 },
                 y: {
                     type: 'logarithmic',
-                    min: Math.min(...Object.values(stopCountOverTime).map(stopData => stopData[stopData.length - 1][1])),
-                    max: Math.max(...Object.values(stopCountOverTime).map(stopData => stopData[stopData.length - 1][1]))
+                    min: Math.min(...Object.values(stopCountOverTime).map(stopData => stopData.length)),
+                    max: Math.max(...Object.values(stopCountOverTime).map(stopData => stopData.length))
                 }
             }
         }
