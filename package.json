@@ -10,8 +10,13 @@
   "author": "Joseph Blair",
   "license": "ISC",
   "dependencies": {
+    "chart.js": "^4.6.1",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "chartjs-plugin-autocolors": "^0.5.1",
     "csv-parse": "^5.4.0",
+    "date-fns": "^4.4.0",
     "moment-timezone": "^0.5.43",
-    "prettier": "^3.9.6"
+    "prettier": "^3.9.6",
+    "skia-canvas": "^4.0.0"
   }
 }
