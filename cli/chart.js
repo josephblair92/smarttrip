@@ -14,7 +14,6 @@ export const generateChart = async (stopCountOverTime) => {
         TimeScale,
         PointElement,
         Legend,
-        // Colors,
         autocolorPlugin
     ]);
     const canvas = new Canvas(2000, 1400);
