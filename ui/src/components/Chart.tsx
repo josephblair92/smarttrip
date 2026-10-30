@@ -19,10 +19,13 @@ ChartJS.register([
     autocolorPlugin
 ]);
 
+const width = window.innerWidth;
+const height = window.innerHeight;
+
 export function Chart ({ data }: ChartComponentProps) {
     const chartProps: Omit<ChartProps<"line">, "type"> = {
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width,
+        height,
         data: {
             datasets: Object.entries(data).map(([stopName, stopData]) => ({
                 label: stopName,
@@ -57,5 +60,9 @@ export function Chart ({ data }: ChartComponentProps) {
             }
         }
     }
-    return <Line {...chartProps} />
+    return (
+        <div>
+            <Line {...chartProps} />
+        </div>
+    );
 }
