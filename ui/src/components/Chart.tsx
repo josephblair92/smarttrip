@@ -25,7 +25,7 @@ export function Chart ({ data }: ChartComponentProps) {
         height: window.innerHeight,
         data: {
             datasets: Object.entries(data).map(([stopName, stopData]) => ({
-                label: `${stopName} (${stopData.length})`,
+                label: stopName,
                 data: stopData.map((timestamp, index) => ({ x: timestamp, y: index })),
                 spanGaps: true
             }))
