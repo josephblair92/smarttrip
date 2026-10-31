@@ -14,7 +14,7 @@ const ignoreTypes = [
 const stationNameOverrides = {
   "W Falls Church": "West Falls Church",
   "E Falls Church": "East Falls Church",
-  "King St 2nd Ent": "King Street",
+  "King St 2nd Ent": "King St",
   "Nat Airport N": "National Airport",
   "Nat Airport S": "National Airport",
   "Rosslyn East": "Rosslyn",
