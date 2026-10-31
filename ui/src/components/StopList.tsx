@@ -14,7 +14,6 @@ const tooltipStyles: CSSProperties = {
     fontSize: '1rem',
     width: '15rem',
     maxHeight: '20rem',
-    overflowY: 'scroll',
     overflowX: 'hidden'
 }
 
@@ -34,6 +33,7 @@ export function StopList ({ stops }: StopListProps) {
             <Tooltip
                 id="stop-list"
                 clickable
+                noArrow
                 opacity={1.0}
                 border="0.1rem solid black"
                 style={tooltipStyles}
