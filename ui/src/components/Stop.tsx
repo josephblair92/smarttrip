@@ -1,4 +1,5 @@
 import { Lines } from "./Lines";
+import stopLines from '../data/stopLines.json'
 
 export interface StopProps {
     name: string,
@@ -15,7 +16,7 @@ export function Stop ({ name, rank, timestamps }: StopProps) {
                     <h3 className="text-xl text-white font-semibold">{name}</h3>
                     <h3 className="text-gray-400">({timestamps.length})</h3>
                 </div>
-                <Lines lines={['or', 'sv', 'bl', 'yl', 'gr', 'rd']} />
+                <Lines lines={stopLines[name as keyof typeof stopLines] ?? []} />
             </div>
         </div>
     )
