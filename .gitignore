@@ -7,3 +7,4 @@ cli/package-lock.json
 cli/script/download.js
 cli/chart.png
 cli/visitsPerStop.json
+ui/src/data/visitsPerStop.json
