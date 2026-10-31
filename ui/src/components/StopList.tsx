@@ -29,7 +29,7 @@ export function StopList ({ stops }: StopListProps) {
     return (
         <>
             <div className="flex flex-col flex-wrap h-screen gap-2">
-                {stops.map(([ name, timestamps ]) => <Stop name={name} timestamps={timestamps} />)}
+                {stops.map(([ name, timestamps ], index) => <Stop name={name} timestamps={timestamps} rank={index + 1} />)}
             </div>
             <Tooltip
                 id="stop-list"
