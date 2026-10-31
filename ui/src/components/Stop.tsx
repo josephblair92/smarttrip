@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { Lines } from "./Lines";
 
 export interface StopProps {
@@ -8,10 +7,6 @@ export interface StopProps {
 }
 
 export function Stop ({ name, rank, timestamps }: StopProps) {
-    const [expanded, setExpanded] = useState(false);
-    const toggleExpanded = () => {
-        setExpanded(cur => !cur)
-    }
     return (
         <div className="w-90" data-tooltip-id="stop-list" data-visits={timestamps.join()}>
             <div className="flex justify-between bg-yellow-950 p-2 gap-3 items-center">
