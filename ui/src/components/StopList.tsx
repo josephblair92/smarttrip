@@ -27,7 +27,7 @@ const renderFn = ({ activeAnchor }: { activeAnchor: Element | null }) => {
 export function StopList ({ stops }: StopListProps) {
     return (
         <>
-            <div className="flex flex-col flex-wrap h-screen gap-2">
+            <div className="flex flex-col flex-wrap h-screen p-2 gap-2">
                 {stops.map(([ name, timestamps ], index) => <Stop name={name} timestamps={timestamps} rank={index + 1} />)}
             </div>
             <Tooltip
@@ -35,7 +35,7 @@ export function StopList ({ stops }: StopListProps) {
                 clickable
                 noArrow
                 opacity={1.0}
-                border="0.1rem solid black"
+                border="0.1rem solid gray"
                 style={tooltipStyles}
                 render={renderFn}
             />
