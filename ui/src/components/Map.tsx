@@ -1,10 +1,7 @@
 import { Tooltip } from 'react-tooltip'
 import MetroMap from '../assets/wmataMap.svg?react'
 import type { CSSProperties } from 'react'
-
-export interface MapProps {
-    data: Record<string, number[]>
-}
+import type { DisplayProps } from '../types'
 
 const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'short' })
 const tooltipStyles: CSSProperties = {
@@ -17,7 +14,7 @@ const tooltipStyles: CSSProperties = {
     overflowX: 'hidden'
 }
 
-export function Map ({ data }: MapProps) {
+export function Map ({ data }: DisplayProps) {
     const renderFn = ({ activeAnchor }: { activeAnchor: Element | null }) => {
         const stopId = activeAnchor?.getAttribute('data-stop-id')
         const timestamps = stopId ? (data[stopId] ?? []) : []
@@ -30,7 +27,7 @@ export function Map ({ data }: MapProps) {
         </div>
     }
     return <>
-        <MetroMap className='h-[95vh] w-auto' />
+        <MetroMap className='h-[93vh] w-auto' />
         <Tooltip
         id="map"
         clickable

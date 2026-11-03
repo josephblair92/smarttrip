@@ -2,10 +2,7 @@ import { Chart as ChartJS, Tooltip, CategoryScale, LinearScale, LineController, 
 import { Line, type ChartProps } from "react-chartjs-2";
 import 'chartjs-adapter-date-fns';
 import autocolorPlugin from "chartjs-plugin-autocolors";
-
-export interface ChartComponentProps {
-    data: Record<string, number[]>
-}
+import type { DisplayProps } from "../types";
 
 ChartJS.register([
     CategoryScale,
@@ -20,9 +17,9 @@ ChartJS.register([
 ]);
 
 const width = window.innerWidth;
-const height = window.innerHeight;
+const height = window.innerHeight * 0.93;
 
-export function Chart ({ data }: ChartComponentProps) {
+export function Chart ({ data }: DisplayProps) {
     const chartProps: Omit<ChartProps<"line">, "type"> = {
         width,
         height,

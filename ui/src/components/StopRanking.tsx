@@ -1,10 +1,7 @@
+import type { DisplayProps } from "../types";
 import { StopList } from "./StopList"
 
-export interface StopRankingProps {
-    data: Record<string, number[]>
-}
-
-export function StopRanking ({ data }: StopRankingProps) {
+export function StopRanking ({ data }: DisplayProps) {
     const stops = Object.entries(data).sort((a, b) => {
         return b[1].length - a[1].length;
     })
