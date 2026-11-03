@@ -1,0 +1,43 @@
+import { Tooltip } from 'react-tooltip'
+import MetroMap from '../assets/wmataMap.svg?react'
+import type { CSSProperties } from 'react'
+
+export interface MapProps {
+    data: Record<string, number[]>
+}
+
+const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'short' })
+const tooltipStyles: CSSProperties = {
+    borderRadius: '1rem',
+    backgroundColor: '#e4e4e4',
+    color: 'black',
+    fontSize: '1rem',
+    width: '15rem',
+    maxHeight: '20rem',
+    overflowX: 'hidden'
+}
+
+export function Map ({ data }: MapProps) {
+    const renderFn = ({ activeAnchor }: { activeAnchor: Element | null }) => {
+        const stopId = activeAnchor?.getAttribute('data-stop-id')
+        const timestamps = stopId ? (data[stopId] ?? []) : []
+        return <div>
+            <h3 className='font-bold'>{stopId} ({timestamps.length})</h3>
+            {timestamps && timestamps.length 
+                ? timestamps.map(timestamp => <p>{formatter.format(timestamp)}</p>)
+                : <p>No visits yet.</p>
+            }
+        </div>
+    }
+    return <>
+        <MetroMap className='h-[95vh] w-auto' />
+        <Tooltip
+        id="map"
+        clickable
+        noArrow
+        opacity={1.0}
+        border="0.1rem solid gray"
+        style={tooltipStyles}
+        render={renderFn} />
+    </>
+}
