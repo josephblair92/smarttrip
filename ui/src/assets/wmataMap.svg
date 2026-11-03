@@ -2385,36 +2385,6 @@
        style="font-family:sans-serif;text-align:start;text-anchor:start">of Columbia</tspan></tspan></text>
 
 <path
-   id="path3909-1-2"
-   d="m 33.975887,179.6638 c 0,2.761 -2.236,5 -5,5 -2.761,0 -5,-2.239 -5,-5 0,-2.761 2.239,-5 5,-5 2.761,0 5,2.239 5,5 z"
-   inkscape:connector-curvature="0"
-   data-tooltip-id="map"
-   data-stop-id="Loudoun Gateway"
-   style="fill:#ffffff;fill-opacity:1;stroke:none" /><path
-   id="path3909-1-7"
-   d="m 51.214548,203.70782 c 0,2.761 -2.236,5 -5,5 -2.761,0 -5,-2.239 -5,-5 0,-2.761 2.239,-5 5,-5 2.761,0 5,2.239 5,5 z"
-   inkscape:connector-curvature="0"
-   data-tooltip-id="map"
-   data-stop-id="Innovation Center"
-   style="fill:#ffffff;fill-opacity:1;stroke:none" /><path
-   id="path3909-1-1"
-   d="m 42.145335,191.35366 c 0,2.761 -2.236,5 -5,5 -2.761,0 -5,-2.239 -5,-5 0,-2.761 2.239,-5 5,-5 2.761,0 5,2.239 5,5 z"
-   inkscape:connector-curvature="0"
-   data-tooltip-id="map"
-   data-stop-id="Dulles Airport"
-   style="fill:#ffffff;fill-opacity:1;stroke:none" /><path
-   id="path3909-1-8"
-   d="m 68.221297,226.96217 c 0,2.761 -2.236002,5 -5.000002,5 -2.761,0 -5,-2.239 -5,-5 0,-2.761 2.239,-5 5,-5 2.761,0 5.000002,2.239 5.000002,5 z"
-   inkscape:connector-curvature="0"
-   data-tooltip-id="map"
-   data-stop-id="Reston Town Center"
-   style="fill:#ffffff;fill-opacity:1;stroke:none" /><path
-   id="path3909-1-9"
-   d="m 59.540554,215.2695 c 0,2.761 -2.236,5 -5,5 -2.761,0 -5,-2.239 -5,-5 0,-2.761 2.239,-5 5,-5 2.761,0 5,2.239 5,5 z"
-   inkscape:connector-curvature="0"
-   data-tooltip-id="map"
-   data-stop-id="Herndon Monroe"
-   style="fill:#ffffff;fill-opacity:1;stroke:none" /><path
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square"
    inkscape:connector-curvature="0"
    data-tooltip-id="map"
@@ -2460,14 +2430,7 @@
    style="font-size:16px;line-height:0%;font-family:ArialMT;fill:#000000;fill-opacity:1;stroke:none"
    x="27.75662"
    y="223.69862">SV</text>
-</g><path
-   id="path3909-1-2-1"
-   d="m 25.57247,167.78298 c 0,2.761 -2.236,5 -5,5 -2.761,0 -5,-2.239 -5,-5 0,-2.761 2.239,-5 5,-5 2.761,0 5,2.239 5,5 z"
-   inkscape:connector-curvature="0"
-   data-tooltip-id="map"
-   data-stop-id="Ashburn"
-   style="fill:#ffffff;fill-opacity:1;stroke:none"
-   sodipodi:nodetypes="sssss" /><text
+</g><text
    transform="rotate(-32.836381)"
    font-size="10"
    id="text123-5"
