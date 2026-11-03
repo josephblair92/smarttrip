@@ -134,6 +134,8 @@
 	
 		<path
    id="path3257"
+   data-tooltip-id="map"
+   data-stop-id="Vienna"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -142,6 +144,8 @@
 	
 		<path
    id="path3259"
+   data-tooltip-id="map"
+   data-stop-id="Dunn Loring"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -150,6 +154,8 @@
 	
 		<path
    id="path3261"
+   data-tooltip-id="map"
+   data-stop-id="West Falls Church"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -158,36 +164,48 @@
 	
 		<path
    id="path3263"
+   data-tooltip-id="map"
+   data-stop-id="Ballston"
    d="m 150.48183,320.68726 c 0,2.762 -2.239,5 -5,5 -2.762,0 -5,-2.238 -5,-5 0,-2.762 2.238,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" />
 	
 		<path
    id="path3265"
+   data-tooltip-id="map"
+   data-stop-id="Wiehle-Reston East"
    d="m 76.982192,239.29874 c 0,2.762 -2.239,5 -5,5 -2.762,0 -5,-2.238 -5,-5 0,-2.762 2.238,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" />
 	
 		<path
    id="path3267"
+   data-tooltip-id="map"
+   data-stop-id="Va Sq-GMU"
    d="m 165.71388,320.20429 c 0,2.762 -2.239,5 -5,5 -2.762,0 -5,-2.238 -5,-5 0,-2.762 2.238,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" />
 	
 		<path
    id="path3269"
+   data-tooltip-id="map"
+   data-stop-id="Clarendon"
    d="m 183.71388,319.72131 c 0,2.762 -2.239,5 -5,5 -2.762,0 -5,-2.238 -5,-5 0,-2.762 2.238,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" />
 	
 		<path
    id="path3271"
+   data-tooltip-id="map"
+   data-stop-id="Court House"
    d="m 199.78198,319.23834 c 0,2.762 -2.239,5 -5,5 -2.762,0 -5,-2.238 -5,-5 0,-2.762 2.238,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" />
 	
 		<path
    id="path3273"
+   data-tooltip-id="map"
+   data-stop-id="Foggy Bottom"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -196,6 +214,8 @@
 	
 		<path
    id="path3275"
+   data-tooltip-id="map"
+   data-stop-id="Farragut West"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -204,6 +224,8 @@
 	
 		<path
    id="path3277"
+   data-tooltip-id="map"
+   data-stop-id="McPherson Sq"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -212,6 +234,8 @@
 	
 		<path
    id="path3279"
+   data-tooltip-id="map"
+   data-stop-id="Federal Triangle"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -220,6 +244,8 @@
 	
 		<path
    id="path3281"
+   data-tooltip-id="map"
+   data-stop-id="Smithsonian"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -228,6 +254,8 @@
 	
 		<path
    id="path3283"
+   data-tooltip-id="map"
+   data-stop-id="Fed Center SW"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -236,6 +264,8 @@
 	
 		<path
    id="path3285"
+   data-tooltip-id="map"
+   data-stop-id="Capitol South"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -244,6 +274,8 @@
 	
 		<path
    id="path3287"
+   data-tooltip-id="map"
+   data-stop-id="Eastern Market"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -252,6 +284,8 @@
 	
 		<path
    id="path3289"
+   data-tooltip-id="map"
+   data-stop-id="Potomac Ave"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -260,6 +294,8 @@
 	
 		<path
    id="path3291"
+   data-tooltip-id="map"
+   data-stop-id="Minnesota Ave"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -268,6 +304,8 @@
 	
 		<path
    id="path3293"
+   data-tooltip-id="map"
+   data-stop-id="Deanwood"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -276,6 +314,8 @@
 	
 		<path
    id="path3295"
+   data-tooltip-id="map"
+   data-stop-id="Cheverly"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -284,6 +324,8 @@
 	
 		<path
    id="path3297"
+   data-tooltip-id="map"
+   data-stop-id="Landover"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -292,6 +334,8 @@
 	
 		<path
    id="path3299"
+   data-tooltip-id="map"
+   data-stop-id="New Carrollton"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -300,36 +344,48 @@
 	
 		<path
    id="path3301"
+   data-tooltip-id="map"
+   data-stop-id="Downtown Largo"
    d="m 692.2309,361.76166 c 0,2.762 -2.236,5 -5,5 -2.761,0 -5,-2.238 -5,-5 0,-2.762 2.239,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" />
 	
 		<path
    id="path3303"
+   data-tooltip-id="map"
+   data-stop-id="Morgan Blvd."
    d="m 672.299,361.27869 c 0,2.762 -2.236,5 -5,5 -2.761,0 -5,-2.238 -5,-5 0,-2.762 2.239,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" />
 	
 		<path
    id="path3305"
+   data-tooltip-id="map"
+   data-stop-id="Addison Road"
    d="m 654.299,359.34678 c 0,2.762 -2.236,5 -5,5 -2.761,0 -5,-2.238 -5,-5 0,-2.762 2.239,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" />
 	
 		<path
    id="path3307"
+   data-tooltip-id="map"
+   data-stop-id="Capitol Heights"
    d="m 630.98627,359.82976 c 0,2.762 -2.236,5 -5,5 -2.761,0 -5,-2.238 -5,-5 0,-2.762 2.239,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" />
 	
 		<path
    id="path3309"
+   data-tooltip-id="map"
+   data-stop-id="Benning Road"
    d="m 605.98627,360.31273 c 0,2.762 -2.236,5 -5,5 -2.761,0 -5,-2.238 -5,-5 0,-2.762 2.239,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" />
 	
 		<path
    id="path3311"
+   data-tooltip-id="map"
+   data-stop-id="Branch Ave"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -338,6 +394,8 @@
 	
 		<path
    id="path3313"
+   data-tooltip-id="map"
+   data-stop-id="Suitland"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -346,6 +404,8 @@
 	
 		<path
    id="path3315"
+   data-tooltip-id="map"
+   data-stop-id="Naylor Road"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -354,6 +414,8 @@
 	
 		<path
    id="path3317"
+   data-tooltip-id="map"
+   data-stop-id="Southern Ave"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -362,6 +424,8 @@
 	
 		<path
    id="path3319"
+   data-tooltip-id="map"
+   data-stop-id="Congress Hgts"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -370,6 +434,8 @@
 	
 		<path
    id="path3321"
+   data-tooltip-id="map"
+   data-stop-id="Anacostia"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -378,6 +444,8 @@
 	
 		<path
    id="path3323"
+   data-tooltip-id="map"
+   data-stop-id="Navy Yard"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -386,6 +454,8 @@
 	
 		<path
    id="path3325"
+   data-tooltip-id="map"
+   data-stop-id="Waterfront"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -394,6 +464,8 @@
 	
 		<path
    id="path3327"
+   data-tooltip-id="map"
+   data-stop-id="Arch-Navy Mem"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -402,6 +474,8 @@
 	
 		<path
    id="path3329"
+   data-tooltip-id="map"
+   data-stop-id="Shaw"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -410,6 +484,8 @@
 	
 		<path
    id="path3331"
+   data-tooltip-id="map"
+   data-stop-id="U Street"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -418,6 +494,8 @@
 	
 		<path
    id="path3333"
+   data-tooltip-id="map"
+   data-stop-id="Columbia Hgts"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -426,6 +504,8 @@
 	
 		<path
    id="path3335"
+   data-tooltip-id="map"
+   data-stop-id="Ga Ave-Petworth"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -434,6 +514,8 @@
 	
 		<path
    id="path3337"
+   data-tooltip-id="map"
+   data-stop-id="W Hyattsville"
    fill="#ffffff"
    stroke="#000000"
    stroke-width="2"
@@ -442,6 +524,8 @@
 	
 		<path
    id="path3339"
+   data-tooltip-id="map"
+   data-stop-id="PG Plaza"
    fill="#ffffff"
    stroke="#000000"
    stroke-width="2"
@@ -450,6 +534,8 @@
 	
 		<path
    id="path3341"
+   data-tooltip-id="map"
+   data-stop-id="College Pk-U MD"
    fill="#ffffff"
    stroke="#000000"
    stroke-width="2"
@@ -458,6 +544,8 @@
 	
 		<path
    id="path3343"
+   data-tooltip-id="map"
+   data-stop-id="Greenbelt"
    fill="#ffffff"
    stroke="#000000"
    stroke-width="2"
@@ -466,6 +554,8 @@
 	
 		<path
    id="path3345"
+   data-tooltip-id="map"
+   data-stop-id="Glenmont"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -474,6 +564,8 @@
 	
 		<path
    id="path3347"
+   data-tooltip-id="map"
+   data-stop-id="Wheaton"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -482,6 +574,8 @@
 	
 		<path
    id="path3349"
+   data-tooltip-id="map"
+   data-stop-id="Forest Glen"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -490,6 +584,8 @@
 	
 		<path
    id="path3351"
+   data-tooltip-id="map"
+   data-stop-id="Silver Spring"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -498,6 +594,8 @@
 	
 		<path
    id="path3353"
+   data-tooltip-id="map"
+   data-stop-id="Takoma"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -506,6 +604,8 @@
 	
 		<path
    id="path3355"
+   data-tooltip-id="map"
+   data-stop-id="Brookland"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -514,6 +614,8 @@
 	
 		<path
    id="path3357"
+   data-tooltip-id="map"
+   data-stop-id="Rhode Island Ave"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -522,6 +624,8 @@
 	
 		<path
    id="path3359"
+   data-tooltip-id="map"
+   data-stop-id="NoMa"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -530,6 +634,8 @@
 	
 		<path
    id="path3361"
+   data-tooltip-id="map"
+   data-stop-id="Union Station"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -538,6 +644,8 @@
 	
 		<path
    id="path3363"
+   data-tooltip-id="map"
+   data-stop-id="Judiciary Square"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -546,6 +654,8 @@
 	
 		<path
    id="path3365"
+   data-tooltip-id="map"
+   data-stop-id="Farragut North"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -554,6 +664,8 @@
 	
 		<path
    id="path3367"
+   data-tooltip-id="map"
+   data-stop-id="Dupont Circle"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -562,6 +674,8 @@
 	
 		<path
    id="path3369"
+   data-tooltip-id="map"
+   data-stop-id="Woodley Park-Zoo"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -570,6 +684,8 @@
 	
 		<path
    id="path3371"
+   data-tooltip-id="map"
+   data-stop-id="Cleveland Park"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -578,6 +694,8 @@
 	
 		<path
    id="path3373"
+   data-tooltip-id="map"
+   data-stop-id="Van Ness-UDC"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -586,6 +704,8 @@
 	
 		<path
    id="path3375"
+   data-tooltip-id="map"
+   data-stop-id="Tenleytown-AU"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -594,6 +714,8 @@
 	
 		<path
    id="path3377"
+   data-tooltip-id="map"
+   data-stop-id="Friendship Heights"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -602,6 +724,8 @@
 	
 		<path
    id="path3379"
+   data-tooltip-id="map"
+   data-stop-id="Bethesda"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -610,6 +734,8 @@
 	
 		<path
    id="path3381"
+   data-tooltip-id="map"
+   data-stop-id="Medical Center"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -618,6 +744,8 @@
 	
 		<path
    id="path3383"
+   data-tooltip-id="map"
+   data-stop-id="Grosvenor"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -626,6 +754,8 @@
 	
 		<path
    id="path3385"
+   data-tooltip-id="map"
+   data-stop-id="White Flint"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -634,6 +764,8 @@
 	
 		<path
    id="path3387"
+   data-tooltip-id="map"
+   data-stop-id="Twinbrook"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -642,6 +774,8 @@
 	
 		<path
    id="path3389"
+   data-tooltip-id="map"
+   data-stop-id="Rockville"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -650,6 +784,8 @@
 	
 		<path
    id="path3391"
+   data-tooltip-id="map"
+   data-stop-id="Shady Grove"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -658,6 +794,8 @@
 	
 		<path
    id="path3393"
+   data-tooltip-id="map"
+   data-stop-id="Arl Cemetery"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -666,6 +804,8 @@
 	
 		<path
    id="path3395"
+   data-tooltip-id="map"
+   data-stop-id="Pentagon City"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -674,6 +814,8 @@
 	
 		<path
    id="path3397"
+   data-tooltip-id="map"
+   data-stop-id="Crystal City"
    fill="#FFFFFF"
    stroke="#000000"
    stroke-width="2"
@@ -682,6 +824,8 @@
 	
 		<path
    id="path3399"
+   data-tooltip-id="map"
+   data-stop-id="National Airport"
    fill="#ffffff"
    stroke="#000000"
    stroke-width="2"
@@ -690,35 +834,47 @@
 	
 		<path
    id="path3401"
+   data-tooltip-id="map"
+   data-stop-id="Braddock Road"
    d="m 350.4389,546.78039 c 0,2.762 -2.236,5 -5,5 -2.761,0 -5,-2.238 -5,-5 0,-2.762 2.239,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" />
 	
 		<path
    id="path3403"
+   data-tooltip-id="map"
+   data-stop-id="Eisenhower Ave"
    d="m 358.64052,589.41302 c 0,2.762 -2.236,5 -5,5 -2.761,0 -5,-2.238 -5,-5 0,-2.762 2.239,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" />
 	
 		<path
    id="path3405"
+   data-tooltip-id="map"
+   data-stop-id="Van Dorn St"
    d="m 248.59356,574.31484 c 0,2.762 -2.239,5 -5,5 -2.762,0 -5,-2.238 -5,-5 0,-2.762 2.238,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" />
 	
 		<path
    id="path3407"
+   data-tooltip-id="map"
+   data-stop-id="Frncnia-Spring"
    d="m 216.61597,606.58271 c 0,2.762 -2.239,5 -5,5 -2.762,0 -5,-2.238 -5,-5 0,-2.762 2.238,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" />
 	
 		<path
    id="path3409"
+   data-tooltip-id="map"
+   data-stop-id="Huntington"
    d="m 358.64052,609.99786 c 0,2.762 -2.236,5 -5,5 -2.761,0 -5,-2.238 -5,-5 0,-2.762 2.239,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" />
 	<g
    id="g3415"
+   data-tooltip-id="map"
+   data-stop-id="Rosslyn"
    transform="translate(-5.2010537,-459.5)">
 		
 			
@@ -740,6 +896,8 @@
 	</g>
 	<g
    id="g3427"
+   data-tooltip-id="map"
+   data-stop-id="Pentagon"
    transform="translate(98.798946,-311.5)">
 		
 			<path
@@ -760,6 +918,8 @@
 	</g>
 	<g
    id="g3433"
+   data-tooltip-id="map"
+   data-stop-id="King St"
    transform="translate(126.79895,-193.98879)">
 		
 			<path
@@ -776,6 +936,8 @@
 	</g>
 	<g
    id="g3439"
+   data-tooltip-id="map"
+   data-stop-id="L'Enfant Plaza"
    transform="translate(195.79895,-389.5)">
 		
 			<path
@@ -796,6 +958,8 @@
 	</g>
 	<g
    id="g3445"
+   data-tooltip-id="map"
+   data-stop-id="Gallery Place"
    transform="translate(195.79895,-449.5)">
 		
 			<path
@@ -816,6 +980,8 @@
 	</g>
 	<g
    id="g3451"
+   data-tooltip-id="map"
+   data-stop-id="Mt Vern Sq-UDC"
    transform="translate(195.79895,-486)">
 		
 			<path
@@ -836,6 +1002,8 @@
 	</g>
 	<g
    id="g3457"
+   data-tooltip-id="map"
+   data-stop-id="Fort Totten"
    transform="translate(237.79895,-605.5)">
 		
 			<path
@@ -856,6 +1024,8 @@
 	</g>
 	<g
    id="g3463"
+   data-tooltip-id="map"
+   data-stop-id="Stadium-Armory"
    transform="translate(348.79895,-414.5)">
 		
 			<path
@@ -1043,6 +1213,8 @@
    y="550.68005"
    style="font-size:10px;line-height:0%;font-family:ArialMT">Braddock Road</text><path
    id="path3401-5"
+   data-tooltip-id="map"
+   data-stop-id="Potomac Yard"
    d="m 350.39709,531.95284 c 0,2.762 -2.236,5 -5,5 -2.761,0 -5,-2.238 -5,-5 0,-2.762 2.239,-5 5,-5 2.761,0 5,2.238 5,5 z"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square" /><text
@@ -2072,6 +2244,8 @@
 
 	<g
    id="g2840"
+   data-tooltip-id="map"
+   data-stop-id="Metro Center"
    transform="translate(154.96946,-450)">
 		
 			<path
@@ -2410,6 +2584,8 @@
    id="path3259-48"
    d="m 85.694378,252.53238 c 0,2.762 -2.239,5 -5,5 -2.762,0 -5,-2.238 -5,-5 0,-2.762 2.238,-5 5,-5 2.761,0 5,2.238 5,5 z" /><g
    transform="translate(-94.35468,-444.41726)"
+   data-tooltip-id="map"
+   data-stop-id="East Falls Church"
    id="g4112-8"><path
      style="fill:#ffffff;stroke:#000000;stroke-width:0.9091;stroke-linecap:square"
      inkscape:connector-curvature="0"
@@ -2509,21 +2685,33 @@
    style="writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#b6b6b6;fill-opacity:1;stroke:#b6b6b6;stroke-width:11.761;stroke-opacity:0.537255" /><path
    d="m 19.856923,162.37538 c -2.762,0 -5,2.238 -5,5 0,2.762 2.238,5 5,5 2.761,0 5,-2.238 5,-5 0,-2.762 -2.239,-5 -5,-5 z"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square"
+   data-tooltip-id="map"
+   data-stop-id="Ashburn"
    id="path1" /><path
    d="m 28.697334,174.87262 c -2.762,0 -5,2.238 -5,5 0,2.762 2.238,5 5,5 2.761,0 5,-2.238 5,-5 0,-2.762 -2.239,-5 -5,-5 z"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square"
+   data-tooltip-id="map"
+   data-stop-id="Loudoun Gateway"
    id="path1-3" /><path
    d="m 37.236209,186.5652 c -2.762,0 -5,2.238 -5,5 0,2.762 2.238,5 5,5 2.761,0 5,-2.238 5,-5 0,-2.762 -2.239,-5 -5,-5 z"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square"
+   data-tooltip-id="map"
+   data-stop-id="Dulles Airport"
    id="path1-3-5" /><path
    d="m 45.868186,198.32923 c -2.762,0 -5,2.238 -5,5 0,2.762 2.238,5 5,5 2.761,0 5,-2.238 5,-5 0,-2.762 -2.239,-5 -5,-5 z"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square"
+   data-tooltip-id="map"
+   data-stop-id="Innovation Center"
    id="path1-3-5-2" /><path
    d="m 54.501838,210.47037 c -2.762,0 -5,2.238 -5,5 0,2.762 2.238,5 5,5 2.761,0 5,-2.238 5,-5 0,-2.762 -2.239,-5 -5,-5 z"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square"
+   data-tooltip-id="map"
+   data-stop-id="Herndon Monroe"
    id="path1-3-5-2-8" /><path
    d="m 63.284754,222.69464 c -2.762,0 -5,2.238 -5,5 0,2.762 2.238,5 5,5 2.761,0 5,-2.238 5,-5 0,-2.762 -2.239,-5 -5,-5 z"
    style="fill:#ffffff;stroke:#000000;stroke-width:2;stroke-linecap:square"
+   data-tooltip-id="map"
+   data-stop-id="Reston Town Center"
    id="path1-3-5-2-8-1" /><g
    id="layer1-3"
    transform="translate(-81.145039,-50.550119)"><text
