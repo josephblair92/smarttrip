@@ -46,6 +46,7 @@ const stationNameOverrides = {
   "Shaw-Hwrd U N": "Shaw",
   "Shaw-Hwrd U S": "Shaw",
   "Navy Yard E": "Navy Yard",
+  "Anacostia N": "Anacostia",
   "Anacostia S": "Anacostia",
   "Judiciary Sq E": "Judiciary Square",
   "Judiciary Sq W": "Judiciary Square",
