@@ -1,9 +1,10 @@
 import { Chart } from "./components/Chart";
 import { StopRanking } from "./components/StopRanking";
 import { Map } from "./components/Map";
-import stopData from "./data/visitsPerStop.json";
 import { useState } from "react";
 import { DisplayTypes, type DisplayProps, type DisplayType } from "./types";
+
+const localData = import.meta.glob('./data/visitsPerStop.json', { eager: true, import: 'default' })?.['./data/visitsPerStop.json'];
 
 const displayComponents: Record<DisplayType, React.FC<DisplayProps>> = {
     [DisplayTypes.CHART]: Chart,
@@ -13,6 +14,7 @@ const displayComponents: Record<DisplayType, React.FC<DisplayProps>> = {
 
 export default function App () {
     const [selectedDisplay, setSelectedDisplay] = useState<DisplayType>(DisplayTypes.LIST)
+    const [stopData, setStopData] = useState(localData ?? {})
     const DisplayComponent = displayComponents[selectedDisplay]
     return <div className="flex flex-col gap-4">
         <div className="flex items-center gap-2 p-3 h-10 bg-black text-white">
