@@ -14,7 +14,8 @@ const displayComponents: Record<DisplayType, React.FC<DisplayProps>> = {
 
 export default function App () {
     const [selectedDisplay, setSelectedDisplay] = useState<DisplayType>(DisplayTypes.LIST)
-    const [stopData, setStopData] = useState(localData ?? {})
+    // @ts-expect-error TS(2345) should be allowed because the default state is no visit history
+    const [stopData, setStopData] = useState<Record<string, number[]>>(localData ?? {})
     const DisplayComponent = displayComponents[selectedDisplay]
     return <div className="flex flex-col gap-4">
         <div className="flex justify-between p-2 h-14 bg-black text-white">
