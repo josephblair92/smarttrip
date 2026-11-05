@@ -7,5 +7,5 @@ export const DisplayTypes = {
 export type DisplayType = (typeof DisplayTypes)[keyof typeof DisplayTypes]
 
 export interface DisplayProps {
-    data: Record<string, number[]>
+    data: Record<string, number[]> | {}
 }
