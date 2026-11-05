@@ -27,7 +27,7 @@ export function Map ({ data }: DisplayProps) {
         </div>
     }
     return <>
-        <MetroMap className='h-[93vh] w-auto' />
+        <MetroMap className='h-[91vh] w-auto' />
         <Tooltip
         id="map"
         clickable

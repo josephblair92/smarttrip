@@ -17,14 +17,20 @@ export default function App () {
     const [stopData, setStopData] = useState(localData ?? {})
     const DisplayComponent = displayComponents[selectedDisplay]
     return <div className="flex flex-col gap-4">
-        <div className="flex items-center gap-2 p-3 h-10 bg-black text-white">
-            <p className="font-bold">Select display mode:</p>
-            <input type="radio" id="chart" value="chart" checked={selectedDisplay === "chart"} onChange={() => setSelectedDisplay("chart")} />
-            <label htmlFor="chart">Chart</label>
-            <input type="radio" id="list" value="list" checked={selectedDisplay === "list"} onChange={() => setSelectedDisplay("list")} />
-            <label htmlFor="chart">List</label>
-            <input type="radio" id="map" value="map" checked={selectedDisplay === "map"} onChange={() => setSelectedDisplay("map")} />
-            <label htmlFor="chart">Map</label>
+        <div className="flex justify-between p-2 h-14 bg-black text-white">
+            <div className="flex items-center gap-2">
+                <p className="font-bold">Select display mode:</p>
+                <input type="radio" id="chart" value="chart" checked={selectedDisplay === "chart"} onChange={() => setSelectedDisplay("chart")} />
+                <label htmlFor="chart">Chart</label>
+                <input type="radio" id="list" value="list" checked={selectedDisplay === "list"} onChange={() => setSelectedDisplay("list")} />
+                <label htmlFor="chart">List</label>
+                <input type="radio" id="map" value="map" checked={selectedDisplay === "map"} onChange={() => setSelectedDisplay("map")} />
+                <label htmlFor="chart">Map</label>
+            </div>
+            <div className="flex gap-2 items-center">
+                <button className="bg-blue-600 p-2 rounded-md">Import Data</button>
+                <button className="bg-blue-600 p-2 rounded-md">Generate Random Data</button>
+            </div>
         </div>
         <DisplayComponent data={stopData} />
     </div>

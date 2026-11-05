@@ -17,7 +17,7 @@ ChartJS.register([
 ]);
 
 const width = window.innerWidth;
-const height = window.innerHeight * 0.93;
+const height = window.innerHeight * 0.91;
 
 export function Chart ({ data }: DisplayProps) {
     const chartProps: Omit<ChartProps<"line">, "type"> = {
