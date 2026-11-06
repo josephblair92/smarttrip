@@ -63,8 +63,8 @@ export function DataInputModal ({ isOpen, onClose, onSaveData }: DataInputModalP
             <div className="flex justify-between items-center">
                 <span className="text-red-600">{parseError ? 'Error parsing data.' : ''}</span>
                 <div className="flex gap-2">
-                    <button className="bg-blue-600 p-2 rounded-md text-white" onClick={onClose}>Close</button>
-                    <button className="bg-blue-600 p-2 rounded-md text-white" onClick={saveData}>Save</button>
+                    <button className="bg-blue-600 p-2 rounded-md text-white border-blue-700 border-1" onClick={onClose}>Close</button>
+                    <button className="bg-blue-600 p-2 rounded-md text-white border-blue-700 border-1" onClick={saveData}>Save</button>
                 </div>
             </div>
         </dialog>

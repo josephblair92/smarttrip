@@ -31,8 +31,8 @@ export default function App () {
                 <label htmlFor="chart">Map</label>
             </div>
             <div className="flex gap-2 items-center">
-                <button className="bg-blue-600 p-2 rounded-md" onClick={() => setIsInputModalOpen(true)}>Import Data</button>
-                <button className="bg-blue-600 p-2 rounded-md">Generate Random Data</button>
+                <button className="bg-blue-600 p-2 rounded-md border-blue-700 border-1" onClick={() => setIsInputModalOpen(true)}>Import Data</button>
+                <button className="bg-blue-600 p-2 rounded-md border-blue-700 border-1">Generate Random Data</button>
             </div>
         </div>
         <DisplayComponent data={stopData} />
