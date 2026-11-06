@@ -3,6 +3,7 @@ import { StopRanking } from "./components/StopRanking";
 import { Map } from "./components/Map";
 import { useState } from "react";
 import { DisplayTypes, type DisplayProps, type DisplayType } from "./types";
+import { DataInputModal } from "./components/DataInputModal";
 
 const localData = import.meta.glob('./data/visitsPerStop.json', { eager: true, import: 'default' })?.['./data/visitsPerStop.json'];
 
@@ -16,6 +17,7 @@ export default function App () {
     const [selectedDisplay, setSelectedDisplay] = useState<DisplayType>(DisplayTypes.LIST)
     // @ts-expect-error TS(2345) should be allowed because the default state is no visit history
     const [stopData, setStopData] = useState<Record<string, number[]>>(localData ?? {})
+    const [isInputModalOpen, setIsInputModalOpen] = useState(false)
     const DisplayComponent = displayComponents[selectedDisplay]
     return <div className="flex flex-col gap-4">
         <div className="flex justify-between p-2 h-14 bg-black text-white">
@@ -29,10 +31,11 @@ export default function App () {
                 <label htmlFor="chart">Map</label>
             </div>
             <div className="flex gap-2 items-center">
-                <button className="bg-blue-600 p-2 rounded-md">Import Data</button>
+                <button className="bg-blue-600 p-2 rounded-md" onClick={() => setIsInputModalOpen(true)}>Import Data</button>
                 <button className="bg-blue-600 p-2 rounded-md">Generate Random Data</button>
             </div>
         </div>
         <DisplayComponent data={stopData} />
+        <DataInputModal isOpen={isInputModalOpen} onClose={() => setIsInputModalOpen(false)} onSaveData={setStopData} />
     </div>
 }
