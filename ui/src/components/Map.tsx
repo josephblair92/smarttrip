@@ -11,7 +11,8 @@ const tooltipStyles: CSSProperties = {
     fontSize: '1rem',
     width: '15rem',
     maxHeight: '20rem',
-    overflowX: 'hidden'
+    overflowX: 'hidden',
+    boxShadow: '5px 5px 5px 1px rgb(0 0 0 / 40%)'
 }
 
 export function Map ({ data }: DisplayProps) {
