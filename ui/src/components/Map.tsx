@@ -1,6 +1,6 @@
 import { Tooltip } from 'react-tooltip'
 import MetroMap from '../assets/wmataMap.svg?react'
-import type { CSSProperties } from 'react'
+import { useEffect, type CSSProperties } from 'react'
 import type { DisplayProps } from '../types'
 
 const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'short' })
@@ -16,6 +16,25 @@ const tooltipStyles: CSSProperties = {
 }
 
 export function Map ({ data }: DisplayProps) {
+
+    useEffect(() => {
+        document.querySelectorAll('[data-tooltip-id="map"]').forEach((el) => {
+            const stopId = el.getAttribute("data-stop-id");
+            console.log(stopId, el.getAttribute("fill"))
+            if (!data[stopId as keyof typeof data]) {
+                console.log(el.tagName)
+                if (el.tagName === "g") {
+                    const { children } = el
+                    for (const child of children) {
+                        child.setAttribute("fill", "#000000")
+                    }
+                } else {
+                    el.setAttribute("fill", "#000000")
+                }
+            }
+        })
+    }, [data])
+
     const renderFn = ({ activeAnchor }: { activeAnchor: Element | null }) => {
         const stopId = activeAnchor?.getAttribute('data-stop-id')
         const timestamps = stopId ? (data[stopId] ?? []) : []
