@@ -20,9 +20,7 @@ export function Map ({ data }: DisplayProps) {
     useEffect(() => {
         document.querySelectorAll('[data-tooltip-id="map"]').forEach((el) => {
             const stopId = el.getAttribute("data-stop-id");
-            console.log(stopId, el.getAttribute("fill"))
             if (!data[stopId as keyof typeof data]) {
-                console.log(el.tagName)
                 if (el.tagName === "g") {
                     const { children } = el
                     for (const child of children) {
