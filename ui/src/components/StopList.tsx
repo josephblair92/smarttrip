@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react"
 import { Stop } from "./Stop"
 import { Tooltip } from "react-tooltip"
+import type { DisplayProps } from "../types"
 
 export interface StopListProps {
     stops: Array<[string, number[]]>
@@ -25,7 +26,10 @@ const renderFn = ({ activeAnchor }: { activeAnchor: Element | null }) => {
     </div>
 }
 
-export function StopList ({ stops }: StopListProps) {
+export function StopList ({ data }: DisplayProps) {
+    const stops = Object.entries(data).sort((a, b) => {
+        return b[1].length - a[1].length;
+    })
     return (
         <>
             <div className="flex flex-col flex-wrap h-[93vh] p-2 gap-2">

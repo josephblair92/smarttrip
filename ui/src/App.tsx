@@ -1,15 +1,15 @@
 import { Chart } from "./components/Chart";
-import { StopRanking } from "./components/StopRanking";
 import { Map } from "./components/Map";
 import { useState } from "react";
 import { DisplayTypes, type DisplayProps, type DisplayType } from "./types";
 import { DataInputModal } from "./components/DataInputModal";
+import { StopList } from "./components/StopList";
 
 const localData = import.meta.glob('./data/visitsPerStop.json', { eager: true, import: 'default' })?.['./data/visitsPerStop.json'];
 
 const displayComponents: Record<DisplayType, React.FC<DisplayProps>> = {
     [DisplayTypes.CHART]: Chart,
-    [DisplayTypes.LIST]: StopRanking,
+    [DisplayTypes.LIST]: StopList,
     [DisplayTypes.MAP]: Map
 }
 
