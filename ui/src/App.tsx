@@ -13,6 +13,9 @@ const displayComponents: Record<DisplayType, React.FC<DisplayProps>> = {
     [DisplayTypes.MAP]: Map
 }
 
+const displayTypes: DisplayType[] = ["chart", "list", "map"]
+const toTitleCase = (str: string) => str[0].toUpperCase() + str.slice(1).toLowerCase()
+
 export default function App () {
     const [selectedDisplay, setSelectedDisplay] = useState<DisplayType>(DisplayTypes.LIST)
     // @ts-expect-error TS(2345) should be allowed because the default state is no visit history
@@ -23,12 +26,10 @@ export default function App () {
         <div className="flex justify-between p-2 h-14 bg-black text-white">
             <div className="flex items-center gap-2">
                 <p className="font-bold">Select display mode:</p>
-                <input type="radio" id="chart" value="chart" checked={selectedDisplay === "chart"} onChange={() => setSelectedDisplay("chart")} />
-                <label htmlFor="chart">Chart</label>
-                <input type="radio" id="list" value="list" checked={selectedDisplay === "list"} onChange={() => setSelectedDisplay("list")} />
-                <label htmlFor="chart">List</label>
-                <input type="radio" id="map" value="map" checked={selectedDisplay === "map"} onChange={() => setSelectedDisplay("map")} />
-                <label htmlFor="chart">Map</label>
+                {displayTypes.map(type => <>
+                    <input type="radio" id={type} value={type} checked={selectedDisplay === type} onChange={() => setSelectedDisplay(type)} />
+                    <label htmlFor={type}>{toTitleCase(type)}</label>                    
+                </>)}
             </div>
             <div className="flex gap-2 items-center">
                 <button className="bg-blue-600 p-2 rounded-md border-blue-700 border-1" onClick={() => setIsInputModalOpen(true)}>Import Data</button>
