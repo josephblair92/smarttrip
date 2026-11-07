@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react"
 import stopLines from "../data/stopLines.json"
+import type { StopData } from "../types"
 
 export interface DataInputModalProps {
     isOpen: boolean
     onClose: () => void
-    onSaveData: (data: Record<string, number[]>) => void
+    onSaveData: (data: StopData) => void
 }
 
 export function DataInputModal ({ isOpen, onClose, onSaveData }: DataInputModalProps) {
