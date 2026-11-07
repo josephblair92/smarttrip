@@ -20,15 +20,15 @@ export function Map ({ data }: DisplayProps) {
     useEffect(() => {
         document.querySelectorAll('[data-tooltip-id="map"]').forEach((el) => {
             const stopId = el.getAttribute("data-stop-id");
-            if (!data[stopId as keyof typeof data]) {
-                if (el.tagName === "g") {
-                    const { children } = el
-                    for (const child of children) {
-                        child.setAttribute("fill", "#000000")
-                    }
-                } else {
-                    el.setAttribute("fill", "#000000")
+            const notVisited = !data[stopId as keyof typeof data]
+            const fillColor = notVisited ? "#000000" : "#FFFFFF"
+            if (el.tagName === "g") {
+                const { children } = el
+                for (const child of children) {
+                    child.setAttribute("fill", fillColor)
                 }
+            } else {
+                el.setAttribute("fill", fillColor)
             }
         })
     }, [data])
