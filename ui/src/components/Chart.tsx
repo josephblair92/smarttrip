@@ -26,7 +26,7 @@ export function Chart ({ data }: DisplayProps) {
         data: {
             datasets: Object.entries(data).map(([stopName, stopData]) => ({
                 label: stopName,
-                data: stopData.map((timestamp, index) => ({ x: timestamp, y: index })),
+                data: stopData.map((timestamp, index) => ({ x: timestamp, y: index + 1 })),
                 spanGaps: true
             }))
         },
@@ -51,7 +51,7 @@ export function Chart ({ data }: DisplayProps) {
                 },
                 y: {
                     type: 'logarithmic',
-                    min: Math.min(...Object.values(data).map(stopData => stopData.length)),
+                    min: 1,
                     max: Math.max(...Object.values(data).map(stopData => stopData.length))
                 }
             }
