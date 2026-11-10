@@ -67,13 +67,13 @@ export default function App() {
         </div>
         <div className="flex gap-2 items-center">
           <button
-            className="bg-blue-600 p-2 rounded-md border-blue-700 border-1"
+            className="bg-blue-600 px-2 py-1.5 rounded-md border-blue-700 border-1"
             onClick={() => setIsInputModalOpen(true)}
           >
             Import Data
           </button>
           <button
-            className="bg-blue-600 p-2 rounded-md border-blue-700 border-1"
+            className="bg-blue-600 px-2 py-1.5 rounded-md border-blue-700 border-1"
             onClick={() => setStopData(generateRandomData)}
           >
             Generate Random Data

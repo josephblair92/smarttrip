@@ -26,7 +26,7 @@ export function Toggle ({ options, currentValue, onChange, dark }: ToggleProps) 
 
     return <div className={`flex rounded-lg ${colors.border} border-1`}>
     {options.map(({ id, label }, index) => (
-        <span key={id} className={`flex px-3 py-2 gap-1 items-center ${currentValue === id ? colors.active : colors.inactive} ${index === 0 ? 'rounded-l-lg' : ''} ${index === options.length - 1 ? 'rounded-r-lg' : ''}`}>
+        <span key={id} className={`flex px-3 py-1 gap-1 items-center ${currentValue === id ? colors.active : colors.inactive} ${index === 0 ? 'rounded-l-lg' : ''} ${index === options.length - 1 ? 'rounded-r-lg' : ''}`}>
             <input
                 type="radio"
                 id={id}
