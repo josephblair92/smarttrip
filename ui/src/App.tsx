@@ -30,7 +30,7 @@ const generateRandomData = () => {
   const stopIds = Object.keys(stopLines)
   const timeRange = 1000 * 60 * 60 * 24 * 30
   const startTime = new Date().getTime() - timeRange
-  const visitDistribution = [50, 30, 20, 17, 15, 12, 10, 7, 5, 4, 2, 2]
+  const visitDistribution = [100, 75, 50, 40, 37, 30, 25, 20, 19, 17, 15, 15, 12, 10, 9, 9, 7, 6, 5, 5, 4, 2, 2, 1, 1]
   return visitDistribution.reduce((acc, numVisits) => {
     const index = Math.floor(Math.random() * stopIds.length)
     const [stopId] = stopIds.splice(index, 1)
