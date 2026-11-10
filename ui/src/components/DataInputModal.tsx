@@ -73,7 +73,7 @@ export function DataInputModal({
       <dialog
         ref={dialogRef}
         onCancel={onCancel}
-        className="flex flex-col m-auto w-200 h-150 gap-3 p-4 rounded-lg border-1 border-gray-500 shadow-xl bg-gray-300 backdrop:bg-black/50"
+        className="flex flex-col m-auto w-200 h-150 gap-3 p-4 rounded-lg border-1 border-gray-500 shadow-xl bg-gray-200 backdrop:bg-black/50"
       >
         <textarea
           ref={inputRef}
