@@ -27,8 +27,8 @@ const renderFn = ({ activeAnchor }: { activeAnchor: Element | null }) => {
   return (
     <div>
       {timestamps &&
-        timestamps.map(timestamp => (
-          <p>{formatter.format(parseInt(timestamp, 10))}</p>
+        timestamps.map((timestamp, index) => (
+          <p key={index}>{formatter.format(parseInt(timestamp, 10))}</p>
         ))}
     </div>
   )
@@ -42,7 +42,7 @@ export function StopList({ data }: DisplayProps) {
     <>
       <div className="flex flex-col flex-wrap h-[93vh] p-2 gap-2 content-start overflow-x-scroll">
         {stops.map(([name, timestamps], index) => (
-          <Stop name={name} timestamps={timestamps} rank={index + 1} />
+          <Stop key={name} name={name} timestamps={timestamps} rank={index + 1} />
         ))}
       </div>
       <Tooltip

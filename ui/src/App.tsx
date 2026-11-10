@@ -58,7 +58,7 @@ export default function App() {
         <div className="flex items-center gap-2">
           <p className="font-bold">Select display mode:</p>
           {displayTypes.map(type => (
-            <>
+            <span key={type} className="flex gap-1 items-center">
               <input
                 type="radio"
                 id={type}
@@ -67,7 +67,7 @@ export default function App() {
                 onChange={() => setSelectedDisplay(type)}
               />
               <label htmlFor={type}>{toTitleCase(type)}</label>
-            </>
+            </span>
           ))}
         </div>
         <div className="flex gap-2 items-center">
