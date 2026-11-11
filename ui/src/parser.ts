@@ -127,7 +127,7 @@ export const parseFiles = async (files: string[]) => {
       }
     }
     const stopsToAdd: StopVisit[] = []
-    railStops.forEach((stop, index) => {
+    railStops.forEach(stop => {
       let stopName
       if (stop.entry.length && !stop.exit.length) {
         stopName = stop.entry
