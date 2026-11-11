@@ -42,7 +42,12 @@ export function StopList({ data }: DisplayProps) {
     <>
       <div className="flex flex-col flex-wrap h-[91vh] p-2 gap-2 content-start overflow-x-scroll">
         {stops.map(([name, timestamps], index) => (
-          <Stop key={name} name={name} timestamps={timestamps} rank={index + 1} />
+          <Stop
+            key={name}
+            name={name}
+            timestamps={timestamps}
+            rank={index + 1}
+          />
         ))}
       </div>
       <Tooltip

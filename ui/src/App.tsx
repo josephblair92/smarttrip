@@ -31,7 +31,10 @@ const generateRandomData = () => {
   const stopIds = Object.keys(stopLines)
   const timeRange = 1000 * 60 * 60 * 24 * 30
   const startTime = new Date().getTime() - timeRange
-  const visitDistribution = [100, 75, 50, 40, 37, 30, 25, 20, 19, 17, 15, 15, 12, 10, 9, 9, 7, 6, 5, 5, 4, 2, 2, 1, 1]
+  const visitDistribution = [
+    100, 75, 50, 40, 37, 30, 25, 20, 19, 17, 15, 15, 12, 10, 9, 9, 7, 6, 5, 5,
+    4, 2, 2, 1, 1
+  ]
   return visitDistribution.reduce((acc, numVisits) => {
     const index = Math.floor(Math.random() * stopIds.length)
     const [stopId] = stopIds.splice(index, 1)
@@ -60,20 +63,17 @@ export default function App() {
           <p className="font-bold">Select display mode:</p>
           <Toggle
             dark
-            options={displayTypes.map(type => ({ id: type, label: toTitleCase(type) }))}
+            options={displayTypes.map(type => ({
+              id: type,
+              label: toTitleCase(type)
+            }))}
             currentValue={selectedDisplay}
             onChange={value => setSelectedDisplay(value as DisplayType)}
           />
         </div>
         <div className="flex gap-2 items-center">
-          <button
-            onClick={() => setIsInputModalOpen(true)}
-          >
-            Import Data
-          </button>
-          <button
-            onClick={() => setStopData(generateRandomData)}
-          >
+          <button onClick={() => setIsInputModalOpen(true)}>Import Data</button>
+          <button onClick={() => setStopData(generateRandomData)}>
             Generate Random Data
           </button>
         </div>

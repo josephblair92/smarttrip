@@ -50,27 +50,32 @@ export function DataInputModal({
         className="flex flex-col m-auto w-200 h-150 gap-3 p-4 rounded-lg border-1 border-gray-500 shadow-xl bg-gray-200 backdrop:bg-black/50"
       >
         <Toggle
-          options={[{id: "csv", label: "Parse CSV files (default)"}, {id: "parsed", label: "Import pre-parsed JSON (advanced)"}]}
+          options={[
+            { id: "csv", label: "Parse CSV files (default)" },
+            { id: "parsed", label: "Import pre-parsed JSON (advanced)" }
+          ]}
           currentValue={importMode}
           onChange={setImportMode}
         />
         <div className="flex-grow">
-        {importMode === "csv" ? <CSVUploader onChange={setLoadedData} setError={setParseError} /> : <JSONUploader onChange={setLoadedData} setError={setParseError} />}
+          {importMode === "csv" ? (
+            <CSVUploader onChange={setLoadedData} setError={setParseError} />
+          ) : (
+            <JSONUploader onChange={setLoadedData} setError={setParseError} />
+          )}
         </div>
         <div className="flex justify-between items-center">
-          {parseError ? <span className="text-red-600">
-            Error parsing data.
-          </span> :
-          loadedData ? <span className="text-green-600">
-            {`Loaded ${Object.values(loadedData).flat().length} visits across ${Object.keys(loadedData).length} stations.`}
-          </span>
-          : <span />}
+          {parseError ? (
+            <span className="text-red-600">Error parsing data.</span>
+          ) : loadedData ? (
+            <span className="text-green-600">
+              {`Loaded ${Object.values(loadedData).flat().length} visits across ${Object.keys(loadedData).length} stations.`}
+            </span>
+          ) : (
+            <span />
+          )}
           <div className="flex gap-2">
-            <button
-              onClick={onClose}
-            >
-              Close
-            </button>
+            <button onClick={onClose}>Close</button>
             <button
               onClick={() => {
                 if (!loadedData) return

@@ -1,13 +1,13 @@
-import { parse } from "csv-parse/browser/esm/sync";
-import moment from "moment-timezone";
+import { parse } from "csv-parse/browser/esm/sync"
+import moment from "moment-timezone"
 
 const ignoreTypes = [
   "Threshold Autoload",
   "Directed Autoload",
   "Cancel Threshold Autoload",
   "Setup Threshold Autoload",
-  "Sale",
-];
+  "Sale"
+]
 const stationNameOverrides = {
   "W Falls Church": "West Falls Church",
   "E Falls Church": "East Falls Church",
@@ -54,8 +54,8 @@ const stationNameOverrides = {
   "New York Ave": "NoMa",
   "New York Ave 2nd": "NoMa",
   "Silver Spring S": "Silver Spring",
-  "Silver Spring N": "Silver Spring",
-};
+  "Silver Spring N": "Silver Spring"
+}
 
 interface TripEvent {
   time: string
@@ -72,15 +72,15 @@ interface StopVisit {
 }
 
 export const parseFiles = async (files: string[]) => {
-  const records: TripEvent[] = [];
+  const records: TripEvent[] = []
   for (const file of files) {
-    const parser: any[] = parse(file, { columns: true });
+    const parser: any[] = parse(file, { columns: true })
     for (const record of parser) {
       if (ignoreTypes.includes(record.Description)) {
-        continue;
+        continue
       }
       if (!["Entry", "Exit", "Transfer"].includes(record.Description)) {
-        console.log(record.Description);
+        console.log(record.Description)
       }
       records.push({
         time: record.Time,
@@ -90,74 +90,75 @@ export const parseFiles = async (files: string[]) => {
         description: record.Description,
         operator: record.Operator,
         entry: record["Entry Location/ Bus Route"],
-        exit: record["Exit Location"],
-      });
+        exit: record["Exit Location"]
+      })
     }
   }
-  records.sort((a, b) => a.timestamp - b.timestamp);
+  records.sort((a, b) => a.timestamp - b.timestamp)
 
-  const trips = [];
-  let startIndex = 0;
+  const trips = []
+  let startIndex = 0
   records.forEach((record, index) => {
     if (record.description === "Entry" && index > 0) {
       trips.push({
         stops: records.slice(startIndex, index),
         duration:
-          (records[index - 1].timestamp - records[startIndex].timestamp) / 60,
-      });
-      startIndex = index;
+          (records[index - 1].timestamp - records[startIndex].timestamp) / 60
+      })
+      startIndex = index
     }
-  });
+  })
   trips.push({
     stops: records.slice(startIndex),
     duration:
       (records[records.length - 1].timestamp - records[startIndex].timestamp) /
-      60,
-  });
-  const busRouteCount: Record<string, number> = {};
-  const railStopCount: Record<string, number> = {};
-  const stopCountOverTime: Record<string, number[]> = {};
+      60
+  })
+  const busRouteCount: Record<string, number> = {}
+  const railStopCount: Record<string, number> = {}
+  const stopCountOverTime: Record<string, number[]> = {}
   for (const trip of trips) {
-    const railStops = [];
+    const railStops = []
     for (const stop of trip.stops) {
       if (stop.operator === "Metrorail") {
-        railStops.push(stop);
+        railStops.push(stop)
       } else if (stop.operator === "Metrobus") {
-        busRouteCount[stop.entry] = (busRouteCount[stop.entry] || 0) + 1;
+        busRouteCount[stop.entry] = (busRouteCount[stop.entry] || 0) + 1
       }
     }
-    const stopsToAdd: StopVisit[] = [];
+    const stopsToAdd: StopVisit[] = []
     railStops.forEach((stop, index) => {
       let stopName
       if (stop.entry.length && !stop.exit.length) {
-        stopName = stop.entry;
+        stopName = stop.entry
       } else if (stop.exit.length && !stop.entry.length) {
-        stopName = stop.exit;
+        stopName = stop.exit
       } else if (
         stop.entry.length &&
         stop.exit.length &&
         stop.description === "Exit"
       ) {
-        stopName = stop.exit;
+        stopName = stop.exit
       } else {
-        console.log(stop);
+        console.log(stop)
       }
-      if (!stopName) return;
+      if (!stopName) return
       if (stationNameOverrides[stopName as keyof typeof stationNameOverrides]) {
-        stopName = stationNameOverrides[stopName as keyof typeof stationNameOverrides]
+        stopName =
+          stationNameOverrides[stopName as keyof typeof stationNameOverrides]
       }
       stopsToAdd.push({
         name: stopName,
         timestamp: stop.timestamp * 1000
-      });
-    });
+      })
+    })
     for (const stop of stopsToAdd) {
-      railStopCount[stop.name] = (railStopCount[stop.name] || 0) + 1;
+      railStopCount[stop.name] = (railStopCount[stop.name] || 0) + 1
       if (!stopCountOverTime[stop.name]) {
-        stopCountOverTime[stop.name] = [];
+        stopCountOverTime[stop.name] = []
       }
-      stopCountOverTime[stop.name].push(stop.timestamp);
+      stopCountOverTime[stop.name].push(stop.timestamp)
     }
   }
   return stopCountOverTime
-};
+}

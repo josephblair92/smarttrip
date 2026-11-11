@@ -44,7 +44,9 @@ export function Map({ data }: DisplayProps) {
           {stopId} ({timestamps.length})
         </h3>
         {timestamps && timestamps.length ? (
-          timestamps.map((timestamp, index) => <p key={index}>{formatter.format(timestamp)}</p>)
+          timestamps.map((timestamp, index) => (
+            <p key={index}>{formatter.format(timestamp)}</p>
+          ))
         ) : (
           <p>No visits yet.</p>
         )}
