@@ -50,7 +50,7 @@ export function DataInputModal({
         className="flex flex-col m-auto w-200 h-150 gap-3 p-4 rounded-lg border-1 border-gray-500 shadow-xl bg-gray-200 backdrop:bg-black/50"
       >
         <Toggle
-          options={[{id: "csv", label: "Parse CSV files (default)"}, {id: "parsed", label: "Import pre-parsed JSON"}]}
+          options={[{id: "csv", label: "Parse CSV files (default)"}, {id: "parsed", label: "Import pre-parsed JSON (advanced)"}]}
           currentValue={importMode}
           onChange={setImportMode}
         />
@@ -67,13 +67,11 @@ export function DataInputModal({
           : <span />}
           <div className="flex gap-2">
             <button
-              className="bg-blue-600 p-2 rounded-md text-white border-blue-700 border-1"
               onClick={onClose}
             >
               Close
             </button>
             <button
-              className="bg-blue-600 p-2 rounded-md text-white border-blue-700 border-1"
               onClick={() => {
                 if (!loadedData) return
                 onSaveData(loadedData)
