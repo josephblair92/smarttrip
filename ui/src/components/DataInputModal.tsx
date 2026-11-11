@@ -1,11 +1,18 @@
 import { useEffect, useRef, useState } from "react"
-import stopLines from "../data/stopLines.json"
 import type { StopData } from "../types"
+import { Toggle } from "./Toggle"
+import { CSVUploader } from "./CSVUploader"
+import { JSONUploader } from "./JSONUploader"
 
 export interface DataInputModalProps {
   isOpen: boolean
   onClose: () => void
   onSaveData: (data: StopData) => void
+}
+
+export interface UploaderProps {
+  onChange: (data: StopData) => void
+  setError: (uploadError: boolean) => void
 }
 
 export function DataInputModal({
@@ -14,8 +21,9 @@ export function DataInputModal({
   onSaveData
 }: DataInputModalProps) {
   const dialogRef = useRef<HTMLDialogElement>(null)
-  const inputRef = useRef<HTMLTextAreaElement>(null)
   const [parseError, setParseError] = useState(false)
+  const [importMode, setImportMode] = useState<string>("csv")
+  const [loadedData, setLoadedData] = useState<StopData>()
 
   useEffect(() => {
     const dialog = dialogRef.current
@@ -32,40 +40,6 @@ export function DataInputModal({
     onClose()
   }
 
-  const isValidFormat = (data: any) => {
-    const keys = Object.keys(data)
-    const values = Object.values(data)
-    if (keys.some(stop => !stopLines[stop as keyof typeof stopLines])) {
-      return false
-    } else if (
-      values.some(
-        value =>
-          !Array.isArray(value) ||
-          value.some(entry => typeof entry !== "number")
-      )
-    ) {
-      return false
-    }
-    return true
-  }
-
-  const saveData = () => {
-    const textarea = inputRef.current
-    if (!textarea) return
-    try {
-      const data = JSON.parse(textarea.value)
-      if (!isValidFormat(data)) {
-        setParseError(true)
-      } else {
-        setParseError(false)
-        onSaveData(data)
-        onClose()
-      }
-    } catch (e) {
-      setParseError(true)
-    }
-  }
-
   if (!isOpen) return <></>
 
   return (
@@ -75,15 +49,22 @@ export function DataInputModal({
         onCancel={onCancel}
         className="flex flex-col m-auto w-200 h-150 gap-3 p-4 rounded-lg border-1 border-gray-500 shadow-xl bg-gray-200 backdrop:bg-black/50"
       >
-        <textarea
-          ref={inputRef}
-          className="bg-white rounded-md grow p-2"
-          placeholder="Enter trip data from visitsPerStop.json file output from parser CLI..."
+        <Toggle
+          options={[{id: "csv", label: "Parse CSV files (default)"}, {id: "parsed", label: "Import pre-parsed JSON"}]}
+          currentValue={importMode}
+          onChange={setImportMode}
         />
+        <div className="flex-grow">
+        {importMode === "csv" ? <CSVUploader onChange={setLoadedData} setError={setParseError} /> : <JSONUploader onChange={setLoadedData} setError={setParseError} />}
+        </div>
         <div className="flex justify-between items-center">
-          <span className="text-red-600">
-            {parseError ? "Error parsing data." : ""}
+          {parseError ? <span className="text-red-600">
+            Error parsing data.
+          </span> :
+          loadedData ? <span className="text-green-600">
+            {`Loaded ${Object.values(loadedData).flat().length} visits across ${Object.keys(loadedData).length} stations.`}
           </span>
+          : <span />}
           <div className="flex gap-2">
             <button
               className="bg-blue-600 p-2 rounded-md text-white border-blue-700 border-1"
@@ -93,7 +74,11 @@ export function DataInputModal({
             </button>
             <button
               className="bg-blue-600 p-2 rounded-md text-white border-blue-700 border-1"
-              onClick={saveData}
+              onClick={() => {
+                if (!loadedData) return
+                onSaveData(loadedData)
+                onClose()
+              }}
             >
               Save
             </button>

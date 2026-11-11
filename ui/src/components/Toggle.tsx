@@ -17,14 +17,14 @@ export function Toggle ({ options, currentValue, onChange, dark }: ToggleProps) 
     }
 
     const lightModeColors = {
-        active: 'bg-gray-200',
-        inactive: 'bg-gray-400',
-        border: 'border-gray-200'
+        active: 'bg-gray-300',
+        inactive: 'bg-gray-100',
+        border: 'border-gray-400'
     }
 
     const colors = dark ? darkModeColors : lightModeColors
 
-    return <div className={`flex rounded-lg ${colors.border} border-1`}>
+    return <span className={`flex w-fit rounded-lg ${colors.border} border-1`}>
     {options.map(({ id, label }, index) => (
         <span key={id} className={`flex px-3 py-1 gap-1 items-center ${currentValue === id ? colors.active : colors.inactive} ${index === 0 ? 'rounded-l-lg' : ''} ${index === options.length - 1 ? 'rounded-r-lg' : ''}`}>
             <input
@@ -38,5 +38,5 @@ export function Toggle ({ options, currentValue, onChange, dark }: ToggleProps) 
             <label htmlFor={id}>{label}</label>
         </span>
     ))}
-    </div>
+    </span>
 }
