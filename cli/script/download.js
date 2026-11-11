@@ -1,8 +1,5 @@
-// https://smarttrip.wmata.com/Account/Summary
-
-const CARD_ID = "REPLACE_ME";
-const NUM_MONTHS = 4;
-
+const NUM_MONTHS = 25;
+const cardId = window.location.pathname.split('/').at(-1);
 const now = new Date();
 const pad = (n) => n.toString().padStart(2, "0");
 const formatDate = (date) =>
@@ -20,7 +17,7 @@ for (let i = -1; i >= -1 * NUM_MONTHS; i--) {
   );
   params.set("Period", "M");
   params.set("TransactionStatus", "Successful");
-  params.set("cardId", CARD_ID);
+  params.set("cardId", cardId);
   const url = `https://smartrip.wmata.com/Card/UsageReport/GetExcel?${params.toString().replaceAll("+", "%20")}`;
   console.log(url);
   window.open(url, "_blank");
